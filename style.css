@@ -11,14 +11,29 @@ body {
 header {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding: 20px;
   background: #000;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img,
+.logo-img {
+  height: 70px; /* increased size */
+  width: auto;
+  display: block;
+  filter: drop-shadow(0 2px 4px rgba(255, 255, 255, 0.2)); /* soft glow */
 }
 
 nav a {
   color: #fff;
   margin-left: 20px;
   text-decoration: none;
+  font-size: 1.1rem; /* slightly bigger */
 }
 
 nav a.active {
@@ -84,9 +99,18 @@ nav a.active {
 }
 
 .booking-photo img {
-  width: 300px;
-  border-radius: 10px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.4);
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  border: 4px solid #fff;
+  object-fit: cover;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.booking-photo img:hover {
+  opacity: 0.85; 
+  transform: scale(1.03); /* slight zoom on hover */
 }
 
 .payment-section {
@@ -108,24 +132,4 @@ footer {
   text-align: center;
   padding: 10px;
   margin-top: 40px;
-}
-.booking-photo img {
-  width: 250px;
-  height: 250px;
-  border-radius: 50%;
-  border: 4px solid #fff;
-  object-fit: cover;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-  transition: opacity 0.3s ease-in-out;
-}
-
-.booking-photo img:hover {
-  opacity: 0.85; /* subtle fade */
-}
-.logo {
-  font-size: 2rem; /* Increase size (default ~1.2rem) */
-  font-weight: bold;
-  display: flex;
-  align-items: center;
-  gap: 8px;
 }
