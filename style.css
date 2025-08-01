@@ -122,3 +122,10 @@ footer {
 .booking-photo img:hover {
   opacity: 0.85; /* subtle fade */
 }
+.logo {
+  font-size: 2rem; /* Increase size (default ~1.2rem) */
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
