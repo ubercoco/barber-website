@@ -21,21 +21,10 @@
     <div class="booking-widget">
       <h2>Book Your Appointment</h2>
       <div class="calendly-inline-widget"
-           data-url="https://calendly.com/yourusername/barber-appointment"
+           data-url="https://calendly.com/m-aouberchkik"
            style="min-width:320px;height:650px;">
       </div>
       <script src="https://assets.calendly.com/assets/external/widget.js" async></script>
-
-      <!-- Payment Section -->
-      <div class="payment-section">
-        <h3>Select Service & Pay</h3>
-        <select id="service">
-          <option value="haircut">Haircut - €20</option>
-          <option value="beard">Beard Trim - €10</option>
-          <option value="full">Full Groom - €30</option>
-        </select>
-        <button onclick="payNow()" class="btn">Pay with iDEAL / Apple Pay</button>
-      </div>
     </div>
 
     <!-- Your Photo -->
@@ -48,15 +37,5 @@
     <p>&copy; 2025 Barber Shop. All rights reserved.</p>
   </footer>
 
-  <script>
-    function payNow() {
-      const service = document.getElementById('service').value;
-      let url = '';
-      if (service === 'haircut') url = 'https://buy.stripe.com/ideal-link-haircut';
-      if (service === 'beard') url = 'https://buy.stripe.com/ideal-link-beard';
-      if (service === 'full') url = 'https://buy.stripe.com/ideal-link-full';
-      window.location.href = url;
-    }
-  </script>
 </body>
 </html>
