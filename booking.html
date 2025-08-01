@@ -5,11 +5,39 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Book Appointment</title>
   <link rel="stylesheet" href="style.css" />
+  <style>
+    /* Inline styles specific to booking page */
+
+    .centered-logo {
+      text-align: center;
+      margin: 20px 0;
+    }
+
+    .centered-logo img {
+      height: 57.5px; /* 15% larger than 50px */
+      width: auto;
+    }
+
+    .booking-photo {
+      display: flex;
+      justify-content: center;
+      margin-top: 20px;
+    }
+
+    .booking-photo img {
+      width: 150px;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 4px solid white;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+  </style>
 </head>
 <body class="dark-theme">
 
   <header>
-    <div class="logo">
+    <div class="logo centered-logo">
       <img src="images/your-logo.png" alt="Barber Logo" class="logo-img">
     </div>
     <nav>
@@ -19,17 +47,20 @@
   </header>
 
   <section class="booking-container">
-    <!-- Booking Widget -->
     <div class="booking-widget">
       <h2>Book Your Appointment</h2>
-   <!-- Calendly inline widget begin -->
-<div class="calendly-inline-widget" data-url="https://calendly.com/m-aouberchkik/new-meeting?hide_event_type_details=1&hide_gdpr_banner=1&background_color=585151&text_color=ffffff&primary_color=ff001e" style="min-width:320px;height:700px;"></div>
-<script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
-<!-- Calendly inline widget end -->
 
-    <!-- Your Photo -->
-    <div class="booking-photo">
-      <img src="images/your-photo.jpg" alt="Barber">
+      <!-- Calendly inline widget begin -->
+      <div class="calendly-inline-widget"
+           data-url="https://calendly.com/m-aouberchkik/new-meeting?hide_event_type_details=1&hide_gdpr_banner=1&background_color=585151&text_color=ffffff&primary_color=ff001e"
+           style="min-width:320px;height:700px;"></div>
+      <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+      <!-- Calendly inline widget end -->
+
+      <!-- Your Photo below the calendar -->
+      <div class="booking-photo">
+        <img src="images/your-photo.jpg" alt="Barber">
+      </div>
     </div>
   </section>
 
