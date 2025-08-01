@@ -21,15 +21,13 @@ header {
 .logo {
   display: flex;
   align-items: center;
-  text-align: center;
 }
 
-.logo img,
-.logo-img {
-  height: 57.5px; /* 15% larger than 50px */
+.logo img {
+  height: 50px;
   width: auto;
   display: block;
-  filter: drop-shadow(0 2px 4px rgba(255, 255, 255, 0.2)); /* soft glow */
+  filter: drop-shadow(0 2px 4px rgba(255, 255, 255, 0.2));
 }
 
 nav a {
@@ -98,11 +96,55 @@ nav a.active {
   background-color: #a90b0b;
 }
 
-/* SECTION BANNER ("Our Prices") */
-.section-banner {
-  background-color: #de0f0f;
-  color: white;
-  padding: 20px;
+/* PRICES SECTION */
+.section-title {
   text-align: center;
+  font-size: 2.2rem;
+  margin-top: 40px;
   margin-bottom: 20px;
-  border-radius:
+  color: white;
+}
+
+/* SERVICE LIST */
+.service-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 0 20px 40px;
+}
+
+.service-card {
+  background-color: #1c1c1c;
+  border: 1px solid #444;
+  padding: 20px;
+  border-radius: 10px;
+  width: 260px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+}
+
+.service-card h3 {
+  color: #ff4d4d;
+  margin-bottom: 10px;
+  font-size: 1.3rem;
+}
+
+.service-card p {
+  font-size: 1rem;
+  color: #ccc;
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #000;
+  color: #777;
+}
